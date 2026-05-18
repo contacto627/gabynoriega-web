@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gaby Noriega | Experiencia que inspira, innovación, formación para emprendedores y proyectos con impacto sostenible." />
+  <meta name="keywords" content="Gaby Noriega, experiencia que inspira, innovación que transforma, emprendimientos, inteligencia artificial, página web, innovación sostenible" />
+  <meta name="author" content="Gaby Noriega" />
+  <title>Gaby Noriega | Experiencia que inspira</title>
+
+  <!--
+    MARCA PERSONAL GABY NORIEGA
+    Dominio: gabynoriega.com
+    Hosting sugerido: Vercel
+    Desarrollo: VSCode + GitHub + Vercel
+
+    INSTRUCCIONES PARA GABY:
+    1. Crea una carpeta llamada assets.
+    2. Guarda dentro las imágenes con estos nombres:
+       - marca.jpeg
+       - gaby-negro-blanco.jpeg
+       - gaby-chef-rosa.jpeg
+    3. Todo lo que diga "PENDIENTE GABY" puedes editarlo directamente aquí.
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* ESQUEMA PERSONAL OFICIAL GABY NORIEGA */
+      --verde-oliva-profundo: #2F3E34;
+      --verde-salvia: #7A8A6A;
+      --arena-calido: #DCCCB3;
+      --marfil: #F7F4EE;
+      --dorado-mate: #C8A967;
+      --blanco-calido: #FFFDF8;
+      --texto-principal: #2F3E34;
+      --texto-suave: #66705F;
+      --borde: rgba(200, 169, 103, 0.32);
+      --sombra: 0 24px 60px rgba(47, 62, 52, 0.13);
+      --radio: 28px;
+      --max-width: 1180px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--texto-principal);
+      background: var(--marfil);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 10% 12%, rgba(200,169,103,0.18), transparent 30%),
+        radial-gradient(circle at 90% 6%, rgba(122,138,106,0.20), transparent 32%),
+        linear-gradient(180deg, #FFFDF8 0%, #F7F4EE 52%, #EFE8DB 100%);
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .contenedor {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .marca-script {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(220, 204, 179, 0.48);
+      color: var(--verde-oliva-profundo);
+      border: 1px solid var(--borde);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+
+    .etiqueta::before {
+      content: "✦";
+      color: var(--dorado-mate);
+    }
+
+    .titulo-seccion {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.25rem, 4.8vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin: 16px 0 20px;
+    }
+
+    .texto-seccion {
+      color: var(--texto-suave);
+      max-width: 790px;
+      font-size: 1.02rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      border: 1px solid transparent;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-principal {
+      background: var(--verde-oliva-profundo);
+      color: var(--blanco-calido);
+      box-shadow: var(--sombra);
+    }
+
+    .btn-principal:hover {
+      background: var(--verde-salvia);
+      transform: translateY(-3px);
+    }
+
+    .btn-secundario {
+      background: rgba(255,253,248,0.72);
+      color: var(--verde-oliva-profundo);
+      border-color: var(--dorado-mate);
+    }
+
+    .btn-secundario:hover {
+      background: var(--arena-calido);
+      transform: translateY(-3px);
+    }
+
+    .pendiente {
+      margin-top: 14px;
+      padding: 13px 15px;
+      border-radius: 18px;
+      border: 1px dashed rgba(200,169,103,0.8);
+      background: rgba(200,169,103,0.09);
+      color: #71664F;
+      font-size: 0.88rem;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 244, 238, 0.90);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(200,169,103,0.22);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  gap: 6px;
+}
+
+    .logo strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--verde-oliva-profundo);
+      letter-spacing: -0.03em;
+    }
+
+    .logo span {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  color: var(--texto-suave);
+  margin-left: 6px;
+  margin-top: 2px;
+}
+
+    .menu {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .menu a:hover { color: var(--dorado-mate); }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 1.8rem;
+      color: var(--verde-oliva-profundo);
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 86px 0 74px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+  .hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 20px 0 24px;
+  max-width: 900px;
+}
+
+    .hero h1 span {
+  display: block;
+  color: var(--verde-salvia);
+}
+
+    .hero p {
+      color: var(--texto-suave);
+      font-size: 1.12rem;
+      max-width: 680px;
+    }
+
+    .hero-acciones {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      background: rgba(255,253,248,0.74);
+      border: 1px solid var(--borde);
+      border-radius: 36px;
+      padding: 16px;
+      box-shadow: var(--sombra);
+    }
+
+    .hero-foto {
+      min-height: 560px;
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(47,62,52,0.05), rgba(47,62,52,0.28)), url('assets/gaby-color.png') center/cover;
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+    }
+
+    .firma-bloque {
+      position: absolute;
+      left: -30px;
+      bottom: 34px;
+      width: min(350px, 82%);
+      background: rgba(255,253,248,0.92);
+      border: 1px solid var(--borde);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 18px 42px rgba(47,62,52,0.16);
+    }
+
+    .firma-bloque strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.15rem;
+      line-height: 0.95;
+      color: var(--verde-oliva-profundo);
+    }
+
+    .firma-bloque span {
+      display: block;
+      margin-top: 9px;
+      color: var(--texto-suave);
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+    }
+
+    .flor {
+  position: absolute;
+  right: -12px;
+  top: -20px;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,253,248,0.55);
+  border-radius: 999px;
+  border: 1px solid rgba(200,169,103,0.28);
+  box-shadow: 0 10px 30px rgba(47,62,52,0.08);
+  padding: 14px;
+}
+
+.flor img {
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 2px rgba(200,169,103,0.7))
+    drop-shadow(0 0 10px rgba(200,169,103,0.35));
+}
+
+    section { padding: 82px 0; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .section-head .texto-seccion { max-width: 560px; }
+
+    .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+    .card {
+      background: rgba(255,253,248,0.80);
+      border: 1px solid var(--borde);
+      border-radius: var(--radio);
+      padding: 30px;
+      box-shadow: 0 14px 36px rgba(47,62,52,0.07);
+    }
+
+    .card h3 {
+      font-size: 1.22rem;
+      margin-bottom: 10px;
+      color: var(--verde-oliva-profundo);
+    }
+
+    .card p, .card li { color: var(--texto-suave); }
+    .card ul { padding-left: 18px; margin-top: 12px; }
+
+    .numero {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--dorado-mate);
+      font-size: 3.4rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .sobre {
+      background: rgba(255,253,248,0.52);
+      border-top: 1px solid rgba(200,169,103,0.16);
+      border-bottom: 1px solid rgba(200,169,103,0.16);
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .sobre-foto {
+      min-height: 520px;
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(255,253,248,0.05), rgba(47,62,52,0.14)), url('assets/gaby-chef-rosa.jpeg') center/cover;
+      border: 1px solid var(--borde);
+      box-shadow: var(--sombra);
+    }
+
+    .datos {
+      background: var(--verde-oliva-profundo);
+      color: var(--blanco-calido);
+      padding: 54px 0;
+    }
+
+    .datos .grid-4 { text-align: center; }
+
+    .dato strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--dorado-mate);
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .dato span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255,253,248,0.82);
+      font-size: 0.9rem;
+    }
+
+    .marca-panel {
+      margin-top: 34px;
+      overflow: hidden;
+      border-radius: 32px;
+      border: 1px solid var(--borde);
+      background: rgba(255,253,248,0.7);
+      box-shadow: var(--sombra);
+    }
+
+    .marca-panel img {
+      width: 100%;
+      max-height: 620px;
+      object-fit: cover;
+    }
+
+    .curso-destacado {
+      background: linear-gradient(135deg, var(--verde-oliva-profundo), #465C48 58%, var(--verde-salvia));
+      color: var(--blanco-calido);
+      border-radius: 34px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 34px;
+      align-items: center;
+      box-shadow: var(--sombra);
+      margin-bottom: 26px;
+    }
+
+    .curso-destacado h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .curso-destacado p, .curso-destacado li { color: rgba(255,253,248,0.86); }
+    .curso-destacado ul { padding-left: 18px; margin-top: 14px; }
+
+    .precio-box {
+      background: rgba(255,253,248,0.12);
+      border: 1px solid rgba(255,253,248,0.26);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .precio-box strong {
+      display: block;
+      font-size: 2.45rem;
+      color: var(--dorado-mate);
+      margin: 8px 0;
+    }
+
+    .caso-link {
+      display: inline-flex;
+      margin-top: 16px;
+      font-weight: 800;
+      color: var(--verde-oliva-profundo);
+      border-bottom: 1px solid var(--dorado-mate);
+    }
+
+    .blog article { min-height: 280px; }
+
+    .contacto {
+      background: rgba(255,253,248,0.60);
+    }
+
+    .contacto-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    form { display: grid; gap: 15px; }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--borde);
+      background: var(--blanco-calido);
+      color: var(--texto-principal);
+      font-family: 'Montserrat', sans-serif;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus { border-color: var(--dorado-mate); }
+    textarea { min-height: 138px; resize: vertical; }
+
+    .whatsapp-flotante {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 120;
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: var(--verde-oliva-profundo);
+      color: var(--blanco-calido);
+      font-weight: 900;
+      box-shadow: var(--sombra);
+      border: 1px solid rgba(255,253,248,0.34);
+    }
+
+    footer {
+      background: #202B24;
+      color: var(--blanco-calido);
+      padding: 34px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .sociales { display: flex; gap: 16px; flex-wrap: wrap; }
+    .sociales a { color: rgba(255,253,248,0.80); }
+    .sociales a:hover { color: var(--dorado-mate); }
+
+    @media (max-width: 960px) {
+      .menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 73px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 26px 8%;
+        background: rgba(255,253,248,0.98);
+        border-bottom: 1px solid var(--borde);
+      }
+
+      .menu.activo { display: flex; }
+      .menu-toggle { display: block; }
+
+      .hero-grid,
+      .sobre-grid,
+      .curso-destacado,
+      .contacto-grid,
+      .grid-2 { grid-template-columns: 1fr; }
+
+      .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .section-head { display: block; }
+      .firma-bloque { left: 18px; }
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 62px 0; }
+      .hero { padding: 62px 0; }
+      .hero h1 { font-size: 3.65rem; }
+      .hero-foto, .sobre-foto { min-height: 430px; }
+      .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .card, .curso-destacado { padding: 24px; }
+      .firma-bloque { position: static; width: 100%; margin-top: 14px; }
+      .flor { right: 12px; top: -16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="contenedor nav">
+      <a href="#inicio" class="logo" aria-label="Inicio Gaby Noriega">
+        <strong>Gaby Noriega</strong>
+        <span>Experiencia que inspira</span>
+      </a>
+
+      <nav class="menu" id="menu">
+        <a href="#sobre-gaby">¿Quién es Gaby?</a>
+        <a href="#formacion">Formación</a>
+        <a href="#innovacion">Innovación</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#testimonios">Casos reales</a>
+        <a href="#blog">Blog</a>
+        <a href="#contacto" class="btn btn-principal">Inscribirme al Próximo Workshop</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="contenedor hero-grid">
+        <div>
+          <span class="etiqueta">Empresaria · Mentora · Innovación Sostenible. IA</span>
+          <h1>Experiencia que inspira. <span>Innovación que transforma.</span></h1>
+          <p>
+            Conecto personas, ideas, y oportunidades para construir un futuro productivo y sostenible.
+          </p>
+          <div class="pendiente">
+            “Hago que lo complejo sea simple”.
+          </div>
+          <div class="hero-acciones">
+            <a class="btn btn-principal" href="#cursos">Mi página web vendiendo en 4 horas</a>
+            <a class="btn btn-secundario" href="#cursos-sin-azucar">Ver cursos Sin Azúcar</a>
+            <a class="btn btn-secundario" href="#sobre-gaby">Conoce mi trayectoria</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="flor">
+  <img src="assets/hoja-dorada.png" alt="Hoja dorada decorativa">
+</div>
+          <div class="hero-card">
+            <div class="hero-foto"></div>
+          </div>
+          <div class="firma-bloque">
+            <strong>Liderazgo con propósito, impacto que trasciende.</strong>
+            <span>Conecto personas, ideas y oportunidades para construir un futuro sostenible.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre-gaby">
+      <div class="contenedor sobre-grid">
+        <div class="sobre-foto"></div>
+        <div>
+          <span class="etiqueta">Sobre Gaby</span>
+          <h2 class="titulo-seccion">Una trayectoria construida desde la práctica.</h2>
+          <p class="texto-seccion">
+            Soy Gaby Noriega, empresaria mexicana con una trayectoria construida desde la práctica, la innovación y la ejecución. He desarrollado proyectos en tecnología, sostenibilidad, repostería sana y formación para emprendedores.
+            <br><br>
+            Mi enfoque es claro: convertir ideas en soluciones reales, accesibles y útiles para personas y negocios que quieren crecer sin perder su esencia.
+          </p>
+          <div class="grid-2" style="margin-top: 28px;">
+            <div class="card">
+              <h3>Lo que sí quiero comunicar</h3>
+              <p>Experiencia, visión, trabajo, método y resultados. El liderazgo se demuestra con hechos, no con discursos.</p>
+            </div>
+            <div class="card">
+              <h3>Lo que evito comunicar</h3>
+              <p>Presunción, exceso de cargos, ruido institucional o proyectos que todavía no estén consolidados.</p>
+            </div>
+          </div>
+          <div class="pendiente">
+            PENDIENTE GABY: años de trayectoria exactos: 35 años de manera formal y 4 de manera informal. Proyectos aproximados: 31, aclarando que no todos han sido duraderos.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="datos" aria-label="Datos principales de trayectoria">
+      <div class="contenedor grid-4">
+        <div class="dato"><strong>35+</strong><span>años de trayectoria formal</span></div>
+        <div class="dato"><strong>31</strong><span>proyectos y emprendimientos creados</span></div>
+        <div class="dato"><strong>4</strong><span>ejes: tecnología, sostenibilidad, formación y comunidad</span></div>
+        <div class="dato"><strong>1</strong><span>propósito: abrir camino con soluciones reales</span></div>
+      </div>
+    </section>
+
+    <section id="formacion">
+      <div class="contenedor">
+        <div class="section-head">
+          <div>
+            <span class="etiqueta">Formación</span>
+            <h2 class="titulo-seccion">Formación que respalda mi visión.</h2>
+          </div>
+          <p class="texto-seccion">
+            Mi formación combina negocios, sostenibilidad, innovación y liderazgo con propósito. He participado en programas nacionales e internacionales que han fortalecido mi visión empresarial y mi compromiso con proyectos que generen valor económico, social y ambiental.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Goldman Sachs 10,000 Women</h3>
+            <p>PENDIENTE GABY: agregar año, aprendizaje principal y si se puede usar logo.</p>
+          </div>
+          <div class="card">
+            <h3>EcoLíder / EcoChallenge</h3>
+            <p>PENDIENTE GABY: agregar premio obtenido, año y nombre exacto del programa.</p>
+          </div>
+          <div class="card">
+            <h3>Diplomado internacional</h3>
+            <p>PENDIENTE GABY: agregar nombre completo del diplomado de liderazgo comunitario y enfoque.</p>
+          </div>
+          <div class="card">
+            <h3>EC0993</h3>
+            <p>Creación de negocios con propuesta de valor sostenible.</p>
+            <div class="pendiente">PENDIENTE: confirmar si lo incluimos como certificación, estándar o formación.</div>
+          </div>
+          <div class="card">
+            <h3>Negocios y ejecución</h3>
+            <p>Aprendizaje adquirido desde la práctica empresarial, el mercado y la mejora continua.</p>
+          </div>
+          <div class="card">
+            <h3>Innovación aplicada</h3>
+            <p>Enfoque en soluciones útiles, sostenibles y comercialmente viables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="innovacion">
+      <div class="contenedor">
+        <div class="section-head">
+          <div>
+            <span class="etiqueta">Innovación</span>
+            <h2 class="titulo-seccion">Innovación aplicada a problemas reales.</h2>
+          </div>
+          <p class="texto-seccion">
+            Esta sección será una de las más fuertes de la página: muestra cómo una idea puede convertirse en solución cuando se cruza experiencia, observación y ejecución.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="numero">01</div>
+            <h3>Aqua Free</h3>
+            <p>Solución enfocada en reducir el consumo de agua en procesos técnicos de la industria óptica.</p>
+            <div class="pendiente">PENDIENTE: confirmar métricas de agua que sí quieras publicar.</div>
+          </div>
+          <div class="card">
+            <div class="numero">02</div>
+            <h3>Ecocycling Poly</h3>
+            <p>Proyecto de economía circular para transformar residuos de policarbonato en nuevos materiales útiles.</p>
+            <div class="pendiente">PENDIENTE: agregar imagen, mockup o dato clave.</div>
+          </div>
+          <div class="card">
+            <div class="numero">03</div>
+            <h3>Tecnología accesible</h3>
+            <p>Uso de inteligencia artificial, páginas web y herramientas digitales para que más negocios puedan competir.</p>
+          </div>
+          <div class="card">
+            <div class="numero">04</div>
+            <h3>Repostería funcional</h3>
+            <p>Productos y recetas sin azúcar y sin harina de trigo, pensadas para opciones más conscientes y accesibles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cursos">
+      <div class="contenedor">
+        <span class="etiqueta">Cursos</span>
+        <h2 class="titulo-seccion">Aprender haciendo. Sin miedo a la tecnología.</h2>
+        <p class="texto-seccion">
+          Dos líneas claras: tecnología para emprendedores y recetas prácticas Sin Azúcar. Ambas nacen de proyectos reales y de necesidades reales.
+        </p>
+
+        <div class="curso-destacado">
+          <div>
+            <h3>Crea la página web de tu negocio con inteligencia artificial</h3>
+            <p>Workshop intensivo de 4 horas para emprendedores que quieren crear una página web funcional, clara y profesional, utilizando inteligencia artificial sin depender totalmente de terceros.</p>
+            <ul>
+              <li>Estructura de página web.</li>
+              <li>Textos base.</li>
+              <li>Uso de inteligencia artificial.</li>
+              <li>Diseño inicial.</li>
+              <li>Publicación o preparación para publicar.</li>
+              <li>Guía paso a paso con VSCode, GitHub y Vercel.</li>
+            </ul>
+            <div class="pendiente" style="background: rgba(255,253,248,0.10); color: rgba(255,253,248,0.9); border-color: rgba(255,253,248,0.34);">
+              PENDIENTE GABY: precio, fecha del primer workshop, lugar, cupo máximo, qué deben llevar los alumnos y forma de pago.
+            </div>
+          </div>
+          <div class="precio-box">
+            <span>Workshop práctico</span>
+            <strong>$ PENDIENTE</strong>
+            <p>Duración: 4 horas</p>
+            <p>Modalidad: PENDIENTE</p>
+            <p>Cupo: PENDIENTE</p>
+            <br>
+            <a class="btn btn-secundario" href="#contacto">Inscribirme</a>
+          </div>
+        </div>
+
+        <div class="grid-2" id="cursos-sin-azucar">
+          <div class="card">
+            <h3>Área tecnológica</h3>
+            <p>Para emprendedores que necesitan presencia digital clara, funcional y publicable.</p>
+            <ul>
+              <li>Haz tu página web en 4 horas.</li>
+              <li>Inteligencia artificial para emprendedores.</li>
+              <li>Herramientas digitales para vender mejor.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Área Sin Azúcar</h3>
+            <p>Cursos en video con recetas accesibles, prácticas y pensadas para prepararse en casa, especialmente en horno de microondas.</p>
+            <ul>
+              <li>Video disponible por 3 días.</li>
+              <li>Precio sugerido: $100 MXN.</li>
+              <li>Venta adicional de paquetes de ingredientes.</li>
+              <li>Venta de moldes o utensilios recomendados.</li>
+            </ul>
+            <div class="pendiente">PENDIENTE: primera receta, duración del video, plataforma, método de pago, ingredientes y moldes.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="testimonios">
+      <div class="contenedor">
+        <div class="section-head">
+          <div>
+            <span class="etiqueta">Casos reales</span>
+            <h2 class="titulo-seccion">Ideas convertidas en plataformas reales.</h2>
+          </div>
+          <p class="texto-seccion">
+            Aquí mostraremos proyectos reales creados o fortalecidos con esta metodología. No vendemos teoría: mostramos ejecución, aprendizaje y resultados visibles.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Sin Azúcar Expo</h3>
+            <p>Página web desarrollada como primera demostración del curso “Crea la página web de tu negocio con inteligencia artificial”, usando HTML, CSS, GitHub y Vercel.</p>
+            <a class="caso-link" href="https://sin-azucar-expo.vercel.app/" target="_blank" rel="noopener">Ver proyecto publicado</a>
+            <div class="pendiente">Caso activo: este será nuestro primer testimonio real del curso.</div>
+          </div>
+          <div class="card">
+            <h3>Ecoat Latinoamérica</h3>
+            <p>Página orientada a servicios técnicos, sostenibilidad, innovación y presencia internacional.</p>
+            <a class="caso-link" href="#contacto">En construcción</a>
+            <div class="pendiente">PENDIENTE: liga final, capturas de pantalla y breve descripción del caso.</div>
+          </div>
+          <div class="card">
+            <h3>Sin Azúcar Repostería</h3>
+            <p>Página enfocada en productos, cursos, venta de recetas y comunidad de bienestar alimentario.</p>
+            <a class="caso-link" href="#contacto">En construcción</a>
+            <div class="pendiente">PENDIENTE: tienda, recetas, paquetes de ingredientes y moldes.</div>
+          </div>
+        </div>
+
+        <div class="marca-panel">
+          <img src="assets/marca.jpeg" alt="Identidad visual Gaby Noriega: colores, tipografía y aplicaciones digitales">
+        </div>
+      </div>
+    </section>
+
+    <section class="blog" id="blog">
+      <div class="contenedor">
+        <span class="etiqueta">Blog</span>
+        <h2 class="titulo-seccion">Ideas para emprender, innovar y liderar con propósito.</h2>
+        <p class="texto-seccion">Aquí sí hablaremos de liderazgo, pero desde la reflexión, la experiencia y la utilidad para otras personas.</p>
+
+        <div class="grid-3" style="margin-top: 34px;">
+          <article class="card">
+            <h3>Por qué todo negocio necesita una página web</h3>
+            <p>PENDIENTE GABY: escribir primer artículo o convertirlo en entrada del curso.</p>
+          </article>
+          <article class="card">
+            <h3>La inteligencia artificial no reemplaza al emprendedor, lo potencia</h3>
+            <p>PENDIENTE GABY: artículo ideal para vender el workshop.</p>
+          </article>
+          <article class="card">
+            <h3>Liderar no es decir que lideras, es construir con otros</h3>
+            <p>PENDIENTE GABY: reflexión de marca personal sin sonar presuntuosa.</p>
+          </article>
+        </div>
+
+        <div class="pendiente">PENDIENTE GABY: definir frecuencia de publicación, primer artículo oficial y foto de portada del blog.</div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <div class="contenedor contacto-grid">
+        <div>
+          <span class="etiqueta">Contacto</span>
+          <h2 class="titulo-seccion">Hablemos de tu proyecto.</h2>
+          <p class="texto-seccion">
+            Ya sea que quieras crear tu página web, tomar un curso, desarrollar una idea o fortalecer tu presencia digital, este puede ser el punto de inicio.
+          </p>
+          <div class="card" style="margin-top: 26px;">
+            <h3>Datos base</h3>
+            <p><strong>Dominio:</strong> gabynoriega.com</p>
+            <p><strong>WhatsApp:</strong> 6142137734</p>
+            <p><strong>Correo:</strong> contacto@gabynoriega.com</p>
+            <p><strong>Ciudad:</strong> Chihuahua, México</p>
+            <div class="pendiente">PENDIENTE GABY: redes sociales oficiales y horarios de atención.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Formulario de contacto</h3>
+          <p style="color: var(--texto-suave); margin-bottom: 18px;">Diseño listo. Después lo conectamos a Formspree, Tally, Google Forms o función serverless en Vercel.</p>
+          <form action="#" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="tel" name="whatsapp" placeholder="WhatsApp" required>
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
+            <select name="necesidad" required>
+              <option value="">¿Qué necesitas?</option>
+              <option>Crear mi página web</option>
+              <option>Tomar el workshop</option>
+              <option>Curso de recetas Sin Azúcar</option>
+              <option>Conferencia / colaboración</option>
+              <option>Otro</option>
+            </select>
+            <textarea name="mensaje" placeholder="Cuéntame brevemente qué necesitas"></textarea>
+            <button class="btn btn-principal" type="submit">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp-flotante" href="https://wa.me/526142137734" target="_blank" aria-label="Enviar WhatsApp">WA</a>
+
+  <footer>
+    <div class="contenedor footer-grid">
+      <p>© <span id="year"></span> Gaby Noriega · gabynoriega.com</p>
+      <div class="sociales">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+    });
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('activo');
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
